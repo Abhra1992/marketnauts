@@ -2,6 +2,7 @@
 //= require environment
 //= require ember-appkit
 //= require ic-ajax
+//= require accounting
 //= require_tree ../lib
 //= require_self
 //= require_tree ./adapters

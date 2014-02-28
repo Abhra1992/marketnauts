@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228135435) do
+ActiveRecord::Schema.define(version: 20140228154344) do
+
+  create_table "stocks", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "stocks", ["name"], name: "index_stocks_on_name", unique: true
 
   create_table "users", force: true do |t|
     t.integer  "uid"
@@ -20,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140228135435) do
     t.string   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cash",       default: 1000000
   end
 
   add_index "users", ["uid"], name: "index_users_on_uid", unique: true

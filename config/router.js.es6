@@ -3,7 +3,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('stocks');
+  this.resource('stocks', function() {
+  });
 });
 
 export default Router;

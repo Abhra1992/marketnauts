@@ -3,6 +3,8 @@ Marketnauts::Application.routes.draw do
     namespace :v1 do
       get '/auth/facebook/callback' => 'users#authenticate'
       post '/auth/sign-out' => 'users#unauthenticate'
+
+      resources :stocks
     end
   end
 
