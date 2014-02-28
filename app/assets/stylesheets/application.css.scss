@@ -1,0 +1,29 @@
+@import "bootstrap";
+@import "font-awesome";
+
+body {
+  background: url(asset_path('an.jpg'));
+}
+
+.login-with-facebook {
+  text-align: center;
+  padding-top: 200px;
+
+  .button-container {
+    display: inline-block;
+    padding: 40px 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.2s ease-in;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      background-color: rgba(220, 220, 255, 0.4);
+    }
+  }
+
+  .btn {
+    font-size: 1.6em;
+    padding: 25px 50px;
+  }
+}
