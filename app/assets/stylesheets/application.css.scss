@@ -25,5 +25,9 @@ body {
   .btn {
     font-size: 1.6em;
     padding: 25px 50px;
+    padding-left: 35px;
+    .fa {
+      padding-right: 15px;
+    }
   }
 }
