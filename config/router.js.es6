@@ -4,6 +4,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('stocks', function() {
+    this.route('show', {path: '/:id'});
   });
 });
 

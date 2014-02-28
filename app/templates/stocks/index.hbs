@@ -1,6 +1,19 @@
 <h2>Stocks</h2>
-<table class="table table-bordered">
-  {{#each}}
-    <tr><td>{{name}}</td></tr>
-  {{/each}}
+<table class="table table-bordered table-striped table-hover clickable-rows">
+  <thead>
+    <tr>
+      <th>Stock</th>
+      <th>Current Price</th>
+      <th>Owned</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each}}
+      <tr {{action clickedStock this}}>
+        <td>{{name}}</td>
+        <td class="money-td">{{show-money amount=currentPrice}}</td>
+        <td class="money-td">{{show-money amount="5"}} (500)</td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>

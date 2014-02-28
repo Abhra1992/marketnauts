@@ -35,7 +35,7 @@ body {
 .well {
   border-radius: 0;
   border: none;
-  opacity: 0.95;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .leaderboard {
@@ -45,5 +45,19 @@ body {
 
   span {
     opacity: 0.7;
+  }
+}
+
+.table {
+  background: #fff;
+
+  &.clickable-rows {
+    tbody tr {
+      cursor: pointer;
+    }
+  }
+
+  .money-td {
+    text-align: right;
   }
 }
