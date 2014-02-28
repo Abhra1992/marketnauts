@@ -4,6 +4,18 @@
       <i class='fa fa-rocket'></i>
       Marketnauts
     {{/link-to}}
+
+    {{#if currentUser.isSignedIn}}
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <p class="navbar-text">Signed in as <strong>{{currentUser.name}}</strong></p>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a href="#" {{action signOut}}>Sign out</a>
+        </li>
+      </ul>
+    {{/if}}
   </div>
 </nav>
 
